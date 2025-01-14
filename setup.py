@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 from distutils.core import setup
 setup(
- name='{name-of-your-project}',
+ name='Game_of_life',
  version='1.0',
- author='{your-full-name-or-your-github-username}',
+ author='ClementFigard',
  license='MIT',
  long_description=open('README.md').read(),
 )
