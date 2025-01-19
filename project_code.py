@@ -21,6 +21,12 @@ jeu[14][11]="#"
 jeu[15][11]="#"
 jeu[16][11]="#"
 
+jeu[0][7]="#"
+jeu[1][8]="#"
+jeu[2][8]="#"
+jeu[2][7]="#"
+jeu[2][6]="#"
+
 def Affichage(m):
     s=""
     for i in range(len(m)):
@@ -71,7 +77,7 @@ def nextEtat(jeu):
 nb_tour = int(input("Veillez entrer le nombre de tour du jeu : "))
 Affichage(jeu)
 while(nb_tour>0):
-    time.sleep(1)
+    time.sleep(0.7)
     print('\n' * 50)
     predict(jeu)
     nextEtat(jeu)
