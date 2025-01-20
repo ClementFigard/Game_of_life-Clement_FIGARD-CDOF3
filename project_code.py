@@ -112,7 +112,15 @@ def saveGame(jeu):
             print(f"Error saving the game: {e}")
 
 # Main game loop
-nb_tour = int(input("Veillez entrer le nombre de tour du jeu : "))  # Number of generations
+nb_tour = -1  # Initialize with an invalid value
+while nb_tour < 0:
+    try:
+        nb_tour = int(input("Veuillez entrer le nombre de tours du jeu (valeur positive) : "))  # Number of generations
+        if nb_tour < 0:
+            print("Le nombre de tours ne peut pas être négatif. Veuillez réessayer.")
+    except ValueError:
+        print("Veuillez entrer un nombre entier valide.")
+
 Affichage(jeu)  # Display the initial state of the grid
 while nb_tour > 0:
     time.sleep(0.7)  # Pause for better visualization
